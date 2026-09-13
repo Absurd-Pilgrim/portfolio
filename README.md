@@ -31,10 +31,6 @@ The site is built with plain HTML, CSS, and JavaScript. It has no build step and
 ```text
 portfolio/
 |-- Images/
-|   |-- RohitMistry_AI_Image.png
-|   |-- RohitMistry_Favicon.png
-|   |-- RohitMistry_Image_1.png
-|   `-- RohitMistry_Image_2.png
 |-- CV_Rohit_Mistry.pdf
 |-- index.html
 |-- tooplate-style.css
@@ -84,7 +80,7 @@ Add your images to `Images/` and update the corresponding `src`, `alt`, `width`,
 
 The current design uses:
 
-- `Images/RohitMistry_AI_Image.png` for the hero portrait
+- `Images/RohitMistry.png` for the hero portrait
 - `Images/RohitMistry_Favicon.png` for the browser icon and navigation avatar
 - `Images/RohitMistry_Image_1.png` for the About section
 
