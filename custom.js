@@ -5,8 +5,12 @@
   const themeToggle = document.querySelector(".theme-toggle");
   const menuToggle = document.querySelector(".menu-toggle");
   const nav = document.querySelector(".site-nav");
+  const themeTransition = document.querySelector(".theme-transition");
   const storedTheme = localStorage.getItem("portfolio-theme");
   const preferredTheme = window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  let themeSwapTimer;
+  let themeCleanupTimer;
 
   function setTheme(theme) {
     root.dataset.theme = theme;
@@ -18,7 +22,30 @@
   setTheme(storedTheme || preferredTheme);
 
   themeToggle.addEventListener("click", function () {
-    setTheme(root.dataset.theme === "dark" ? "light" : "dark");
+    const nextTheme = root.dataset.theme === "dark" ? "light" : "dark";
+
+    if (reducedMotion) {
+      setTheme(nextTheme);
+      return;
+    }
+
+    window.clearTimeout(themeSwapTimer);
+    window.clearTimeout(themeCleanupTimer);
+    themeTransition.className = "theme-transition";
+    void themeTransition.offsetWidth;
+    themeTransition.classList.add(nextTheme === "light" ? "to-light" : "to-dark");
+    themeToggle.classList.add("is-switching");
+    themeToggle.disabled = true;
+
+    themeSwapTimer = window.setTimeout(function () {
+      setTheme(nextTheme);
+    }, 430);
+
+    themeCleanupTimer = window.setTimeout(function () {
+      themeTransition.className = "theme-transition";
+      themeToggle.classList.remove("is-switching");
+      themeToggle.disabled = false;
+    }, 1100);
   });
 
   menuToggle.addEventListener("click", function () {
@@ -41,7 +68,6 @@
     header.classList.toggle("is-scrolled", window.scrollY > 24);
   }, { passive: true });
 
-  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   if (reducedMotion || !("IntersectionObserver" in window)) {
     document.querySelectorAll(".reveal").forEach(function (element) {
       element.classList.add("is-visible");

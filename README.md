@@ -9,7 +9,7 @@ The site is built with plain HTML, CSS, and JavaScript. It has no build step and
 ## Features
 
 - Responsive layout for desktop, tablet, and mobile
-- Dark and light themes with saved user preference
+- Dark and light themes with saved preference and theme-colored sweep transitions
 - CV-based experience, education, and technical skills
 - Five featured projects linked to the `Absurd-Pilgrim` GitHub account
 - Personal portrait photography from the local `Images` directory
