@@ -12,10 +12,7 @@
   --accent: #4de2bd;
   --accent-strong: #20cda3;
   --accent-soft: rgba(77, 226, 189, 0.12);
-  --blue: #69a8ff;
-  --purple: #ba8cff;
   --shadow: 0 24px 80px rgba(0, 0, 0, 0.25);
-  --radius-sm: 12px;
   --radius: 22px;
   --radius-lg: 32px;
   --max-width: 1180px;
@@ -36,8 +33,6 @@
   --accent: #008f72;
   --accent-strong: #007b63;
   --accent-soft: rgba(0, 143, 114, 0.09);
-  --blue: #256cd4;
-  --purple: #7b45c8;
   --shadow: 0 24px 70px rgba(33, 67, 96, 0.12);
 }
 
@@ -1450,13 +1445,6 @@ h3,
   width: 100%;
   border: 0;
   cursor: pointer;
-}
-
-.form-note {
-  margin: -5px 0 0;
-  color: var(--muted);
-  font-size: 11px;
-  text-align: center;
 }
 
 .honeypot {

@@ -31,6 +31,9 @@ The site is built with plain HTML, CSS, and JavaScript. It has no build step and
 ```text
 portfolio/
 |-- Images/
+|   |-- RohitMistry.png
+|   |-- RohitMistry_Favicon.png
+|   `-- RohitMistry_Image_1.png
 |-- CV_Rohit_Mistry.pdf
 |-- index.html
 |-- tooplate-style.css
@@ -38,7 +41,7 @@ portfolio/
 `-- README.md
 ```
 
-The repository also contains some legacy vendor assets from an earlier version. The current website only requires the files shown above, plus an internet connection for the Google Fonts.
+These are all the files required by the website. An internet connection is only needed to load Google Fonts and submit the contact form.
 
 ## Run locally
 
