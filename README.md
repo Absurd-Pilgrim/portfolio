@@ -32,6 +32,7 @@ The site is built with plain HTML, CSS, and JavaScript. It has no build step and
 portfolio/
 |-- Images/
 |   |-- RohitMistry_AI_Image.png
+|   |-- RohitMistry_Favicon.png
 |   |-- RohitMistry_Image_1.png
 |   `-- RohitMistry_Image_2.png
 |-- CV_Rohit_Mistry.pdf
@@ -84,6 +85,7 @@ Add your images to `Images/` and update the corresponding `src`, `alt`, `width`,
 The current design uses:
 
 - `Images/RohitMistry_AI_Image.png` for the hero portrait
+- `Images/RohitMistry_Favicon.png` for the browser icon and navigation avatar
 - `Images/RohitMistry_Image_1.png` for the About section
 
 For good results, use a square hero image and a portrait-oriented About image. Keep the files compressed to improve page-loading speed.
